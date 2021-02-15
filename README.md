@@ -1,4 +1,6 @@
 # site_do_povao
 
-objetivo: criar um site eperimental para ver no que da
+objetivo: criar um site eperimental para ver no que da.
+
+Participantes: Gabriel e Joab
 
