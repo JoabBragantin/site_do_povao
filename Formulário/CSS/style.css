@@ -20,8 +20,7 @@ a{
     font-size: 1.5em;
     padding: 5px;}
 .botao:hover {
-    background-color: rgb(160, 160, 160);
-}
+    background-color: rgb(160, 160, 160);}
 
 /*Seção*/
 
@@ -96,3 +95,36 @@ a{
 /*Footer/Footer*/
 #main footer div:nth-child(3){
     height: 20vh;}
+
+
+/*Responsivo*/
+
+@media (max-width:1050px){
+
+    #main {
+        width: 90%;
+    }
+    #main #menu {display: none;}
+    #main header{background-color: black;}
+    #main article {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+    }
+    #main article div.seções {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin: 10px 0;
+        min-width: 50%;
+        max-width: 70%;
+    }
+    #main footer div:nth-child(1){
+        display: none;
+    }
+    #main footer div:nth-child(2){
+        display: none;
+    }
+
+}
