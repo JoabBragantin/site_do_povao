@@ -3,7 +3,7 @@ body{background-image: url("/Formulário/imagens/background.jpg");}
 
 /*Formatações globais*/
 
-h1, h2 ,h3, h4, p, a, figcaption{
+h1, h2 ,h3, h4, p, a{
     color: gray;
     line-height: 1.5em;
     font-family: Arial;}
@@ -33,23 +33,23 @@ a{
     grid-template-areas: "header header" "nav nav" "article article" "footer footer";
     grid-template-rows: 35vh 10vh auto auto;
     grid-gap: 20px;}
-/*Header*/
+/*---------------------Header---------------------*/
 #main header {
     grid-area: header;
     width: 100%;
     background-color: aqua;}
-/*Nav*/    
+/*---------------------Nav---------------------*/  
 #menu {
     grid-area: nav;
     background-color: black;}
-/*Article*/
+/*---------------------Article---------------------*/
 #main article {
     grid-area: article;
     display: flex;
     align-items: baseline;
     justify-content: space-around;
     padding: 5% 0;}
-/*Colunas*/    
+/*---------------------Colunas---------------------*/   
 #main article div.seções{
     display: flex;
     flex-direction: column;
@@ -59,7 +59,6 @@ a{
     background-image: linear-gradient(to bottom, rgb(200, 200, 200), rgb(160, 160, 160));
     padding: 30px;
     border: 2px solid rgb(100, 100, 100);}
-/*Coluna 1 e 2*/
 .text{
     color: rgb(100, 100, 100);
     width: 70%;
@@ -77,54 +76,79 @@ a{
     align-items: center;
     justify-content: space-around;}
 
-/*Footer*/
+/*---------------------Footer---------------------*/
 #main footer {
     grid-area: footer;
     display: flex;
     flex-wrap: wrap;}
-/*Footer/Header*/
+/*---------------------Footer/Header---------------------*/
 #main footer div {
     margin: 20px 0;
     width: 100%;
     height: 40vh;
     flex-direction: column;
     background-color: aqua;}
-/*Footer/Article*/
+/*---------------------Footer/Article---------------------*/
 #main footer div:nth-child(2){
     height: 30vh;}
-/*Footer/Footer*/
+/*---------------------Footer/Footer---------------------*/
 #main footer div:nth-child(3){
     height: 20vh;}
 
 
 /*Responsivo*/
 
+/*Tablet*/
+
 @media (max-width:1050px){
 
+/*Alterações globais*/
+
+    h1, h2 ,h3, h4, p, a, figcaption{
+        line-height: normal;    }
+    p{font-size: 1em;}
+    .botao{font-size: 1em; padding: 3px;}
+
+/*Alterações no layout*/
+
     #main {
-        width: 90%;
-    }
+        width: 90%;}
     #main #menu {display: none;}
     #main header{background-color: black;}
     #main article {
         flex-direction: column;
         align-items: center;
         width: 100%;
-        padding: 0;
-    }
+        padding: 0;}
     #main article div.seções {
         display: flex;
         align-items: center;
         text-align: center;
         margin: 10px 0;
         min-width: 50%;
-        max-width: 70%;
-    }
+        max-width: 90%;}
     #main footer div:nth-child(1){
-        display: none;
-    }
+        display: none;}
     #main footer div:nth-child(2){
-        display: none;
-    }
+        display: none;}
 
+}
+
+/*Celular*/
+
+@media (max-width: 600px){ 
+
+/*Alterações globais*/
+
+    #main {width: 100%;}
+    #p, p, .text, a {font-size: 1em; font-weight: normal;}
+    .icones {width: 20px; height: 20px;}
+    .botao {
+    width: 100%;
+    font-size: .8em;}
+    input {width: 60%;}
+/*Alterações no layout*/
+    #main article div.seções {padding: 0; width: 100%;}
+    #genero{display:flex; flex-direction: row;}
+      
 }
