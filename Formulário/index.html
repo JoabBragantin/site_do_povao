@@ -5,154 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>teste</title>
-    <link rel="stylesheet" href="CSS/style.css">
-
-    <!--SVG-->
-
-<svg display="none" width="0" heigth="0" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-
-<!----------------------------------------------------------------->
-
-            <!--Google-->
-            <symbol id="google-icon" viewBox="0 -91 512 512">
-                <title>Google</title>
-                <path d="m166 60c34.667969 0 66.027344 17.789062 84 42.300781l42.597656-42.902343c-25.476562-33.128907-74.511718-59.398438-126.597656-59.398438-91.199219 0-166 73.800781-166 165s74.800781 165 166 165c75.601562 0 139.199219-50.699219 158.699219-120 4.199219-14.402344 6.300781-29.402344 6.300781-45v-15h-150v59.988281h79.5c-16.5 35.402344-52.800781 60.011719-94.5 60.011719-57.898438 0-106-47.101562-106-105s48.101562-105 106-105zm0 0"/>
-                <path d="m466 90h-60v45h-45v60h45v45h60v-45h46v-60h-46zm0 0"/>
-            </symbol>
-
-<!----------------------------------------------------------------->
-
-            <!--Facebook-->
-
-            <symbol width="90%" id="facebook-icon" viewBox="0 0 155.139 155.139">
-                <title>Facebook</title>
-            <path d="M89.584,155.139V84.378h23.742l3.562-27.585H89.584V39.184
-                    c0-7.984,2.208-13.425,13.67-13.425l14.595-0.006V1.08C115.325,0.752,106.661,0,96.577,0C75.52,0,61.104,12.853,61.104,36.452
-                    v20.341H37.29v27.585h23.814v70.761H89.584z"/>
-            </symbol>   
-
-    </defs>
-    
-</svg>    
+    <link rel="stylesheet" href="/Formulário/CSS/style.css">
 </head>
 <body>
-        <section id="main">
-<!----------------------------------------------------------------->
-            <!--Cabeçalho-->
+    <section id="main">
+        <article>
 
-            <header></header>
+             <!------------------------------Coluna 1----------------------------------->
 
-            <!--/Cabeçalho-->
-<!----------------------------------------------------------------->
-            <!--Menu-->
-
-            <nav id="menu">
-            </nav>
-
-            <!--/Menu-->
-<!----------------------------------------------------------------->
-            <!--Duas colunas-->
-
-            <article>
-
-                <!--Primeira Coluna-->
-
-                <div class="seções">
-                    <h2>Ja é cadastrado?</h2><br>
-                    <p>Então entre com seus dados de login e senha.</p><br>
-                    <form>
-                        <!--Email e Senha-->
-                        <fieldset class="field">
-                            <div>
-                                <label class="text">seu email:</label><br>
-                                <input type="email" name="email">
-                                    <br><br>
-                                <label class="text">sua senha:</label><br>
-                                <input type="password" name="senha">
-                            </div>
-                        </fieldset>
-                            <br><br>
-                        <!--/Email e Senha-->
-
-                    <a class=" href="#">Esqueceu sua senha?</a><br><br>
-                    <button class="botao">ENTRAR</button><br><br>
-                    <p id="p2">Entre com sua conta do Facebook ou Google</p><br>
-                        <!--Icones-->
-                    <div class="icones-area">
-                        <a href="#">
-                            <svg class="icones">
-                                <use xlink:href="#google-icon"></use>
-                            </svg>
-                        </a>
-                        <a href="#">
-                            <svg class="icones">
-                                <use xlink:href="#facebook-icon"></use>
-                            </svg>
-                        </a>
-                    </div>
+            <div id="coluna1">
+                <h1>Ja é cadastrado?</h1>
+                <p>Então entre com seus dados</p>
+                <form>
+                    <fieldset>
+                        <legend>Dados da conta</legend>
+                            <label>email:</label>
+                                <input name="email" type="email" required>
+                            <label>senha</label>
+                                <input name="senha" type="password" required>
+                    </fieldset> 
+                        <a href="#">Esqueceu sua senha?</a>
+                        <p><strong>Entre com sua conta no Facebook ou Google</strong></p>
+                        <button type="submit">ENTRE</button>
                 </form>
-                </div>
+                    
+            </div>
 
-                <!--Segunda Coluna-->
-
-                <div class="seções">
-                    <h2>Ja é cadastrado?</h2><br>
-                    <p>Então entre com seus dados de login e senha.</p><br>
-
-                    <!--Email e Senha-->
-
-                    <form>
-                        <fieldset class="field">
-                           <label class="text">seu e-mail:</label class="text"><br> 
-                            <input type="email" name="email">
-                                <br><br>
-                          <label class="text">sua senha:</label class="text"><br>  
-                            <input class=" type="password" name="senha">
-                        </fieldset>
-                            <br><br>
-                        <!--/Email e Senha-->
-
-                        <!--Nome e CPF-->
-                        <fieldset class="field">
-                           <label class="text">seu cpf:</label class="text"><br>
-                        <input type="text" name="CPF">
-                                <br><br>                        
-                           <label class="text">seu nome completo:</label class="text"><br> 
-                            <input class=" type="text" name="Nome-Completo">
-                        </fieldset>
-                            <br><br>
-                        <!--/Nome e CPF-->
-
-                        <!--Data, Genero e Telefone-->
-                        <fieldset class="field">
-                           <label class="text">data de nascimento:</label class="text"> <br>
-                        <input type="date"><br><br>
-                        
-                            <label class="text">sexo:</label class="text"><br>
-                            <div id="genero">
-                        <label class="text"><input type="radio" name="genero" value="masculino" checked>masculino</label class="text">
-                        <label class="text"><input type="radio" name="genero" value="feminino">feminino</label class="text">
-                            </div>         
+            <!------------------------------Coluna 2----------------------------------->
+            
+            <div id="coluna2">
+                <h1>Ainda não é cadastrado?</h1>
+                <p>Cadastre agora</p>
+                <form action="">
+                    <fieldset>
+                        <legend>Identificação</legend>
+                        <label for="">email:</label>
+                            <input name="email" type="email" required>
+                        <label for="">senha:</label>
+                            <input name="senha" type="password" required>
                     </fieldset>
-                    <br><br>
-                    <button class="botao">CADASTRAR</button>
-                    </form>
-                </div>
-            </article>
-
-            <!--/Duas colunas-->
-<!----------------------------------------------------------------->
-            <!--Footer-->
-
-            <footer>
-                <div></div>
-                <div></div>
-                <div></div>
-            </footer>
-
-            <!--/Footer-->
-<!----------------------------------------------------------------->
-        </section>
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <label for="">CPF:</label>
+                            <input name="cpf" type="number" required>
+                        <label for="">Estado:</label>
+                    <select name="estados">
+                        <option value="none">----</option>
+                        <option value="acre">Acre</option>
+                        <option value="alagoas">Alagoas</option>
+                        <option value="amapa">Amapá</option>
+                        <option value="amazonas">Amazonas</option>
+                        <option value="bahia">Bahia</option>
+                        <option value="ceara">Ceará</option>
+                        <option value="distrito-federal">Distrito Federal</option>
+                        <option value="espirito-santo">Espirito Santo</option>
+                        <option value="goias">Goiás</option>
+                        <option value="maranhao">Maranhão</option>
+                        <option value="mato-grosso">Mato Grosso</option>
+                        <option value="mato-grosso-do-sul">Mato Grosso do Sul</option>
+                        <option value="minas-gerais">Minas Gerais</option>
+                        <option value="para">Pará</option>
+                        <option value="paraiba">Paraiba</option>
+                        <option value="parana">Paraná</option>
+                        <option value="pernambuco">Pernambuco</option>
+                        <option value="piaui">Piaui</option>
+                        <option value="rio-de-janeiro">Rio de Janeiro</option>
+                        <option value="rio-grande-do-norte">Rio Grande do Norte</option>
+                        <option value="Rio-grande-do-sul">Rio Grande do Sul</option>
+                        <option value="rondonia">Rondônia</option>
+                        <option value="santa-catarina">Santa Catarina</option>
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="sergipe">Sergipe</option>
+                        <option value="tocantins">Tocantins</option>
+                    </select>
+                        <label>Nome completo:</label>
+                            <input name="nome" type="text" required>
+                        <label>Sexo:</label>
+                        <label>
+                            <input type="radio" name="masculino" value="Masculino" checked>Masculino
+                        </label>
+                        <label>
+                            <input type="radio" name="feminino" value="Feminino">Feminino
+                        </label>
+                    </fieldset>
+                    <button class="coluna1-2" type="submit">CADASTRAR</button>
+                </form>
+                    
+            </div>
+        </article>
+    </section>
 </body>
 </html>
