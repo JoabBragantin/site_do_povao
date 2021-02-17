@@ -82,7 +82,7 @@ fieldset, p, h1, a, button {animation-name: var(--name);
 
 @media (max-width: 700px){
 
-    @keyframes transition{none}
+    @keyframes transition{to {transform: none;}}
     #main {width: 100%;}
     #main article #coluna2 form {
         display:flex;
@@ -97,7 +97,7 @@ fieldset, p, h1, a, button {animation-name: var(--name);
 }
 
 @media (max-width:400px){
-    #main article {padding: 2px;}
+    #main article {padding: 10px;}
     #main article div {width: 100%;}
 }
 
