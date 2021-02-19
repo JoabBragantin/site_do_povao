@@ -41,7 +41,7 @@ fieldset {
     border: 2px solid var(--cor2);}
 legend, h1, strong{color: var(--cor2);}
 form {text-align: center; width: 95%;}
-fieldset, p, h1, a, button, img {animation-name: var(--name);
+fieldset, p, h1, a, button, .icons {animation-name: var(--name);
     animation-delay: 0s;
     animation-duration: 2s}
 .icons{
@@ -73,7 +73,46 @@ body{
 
 #main header {
     grid-area: header;
-    background-color: red;}    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--cor2);} 
+.logo {
+    grid-column: 1;
+    width: 120px;}
+#main header a {animation: none;}
+#main header div.search {
+    grid-column: 2;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--cor5);
+    padding: 10px;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;}
+.search a {display: contents;}
+
+#menuHeader {
+    grid-column: 3;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 40px;}
+#menuHeader .iconHeader {
+    background-color: var(--cor5);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    border-radius: 10px;}
+#menuHeader a {
+    display: contents;
+    text-decoration: none;
+    color: var(--cor2);}
+#menuHeader .iconHeader:hover {background-color: var(--cor4)}
+#menuHeader img {width: 40px;}
+
 
 /*Article*/
 
@@ -101,12 +140,27 @@ body{
 
 #main footer {
     grid-area: footer;
-    background-color: red;}
-
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    padding: 0 40px;
+    background-color: var(--cor2);}
+#main footer a {animation: none;}
+.footer {width: 80px;}
+.Social {
+    width: 50px;
+    border: 2px solid var(--cor1);
+    border-radius: 20%;
+    padding: 10px;
+    margin: 0 10px;
+    background-color: var(--cor3);}
+.Social:hover {background-color: var(--cor4);}
 
 /*Modo resposivo*/
 
 @media (max-width:1150px){
+    div.search input {width: 100px;}
+    #menuHeader .iconHeader{width: 150px; margin: 0 10px;}
     #main article {
         display: flex;
         flex-direction: column;
@@ -128,7 +182,11 @@ body{
 @media (max-width: 750px){
 
     @keyframes transition{to {transform: none;}}
-    #main {width: 100%;}
+    #main {width:fit-content;}
+    #main header {display: flex; flex-direction: column;}
+    .logo{display: none;}
+    #main header div.search {padding: 4px;}
+    #main header div.search input {width: 200px; height: 25px;}
     #main article #coluna2 form {
         display:flex;
         flex-direction: column;}
@@ -137,6 +195,9 @@ body{
     fieldset {padding: 10px 0;}
     form {padding: 0;}
     input, select{max-width: 50%; align-self: center;}
+    footer div {display: flex;}
+    .Social{display: block;}
+    
 }
 @media (max-width: 400px){
     #main article {padding: 2px;}
