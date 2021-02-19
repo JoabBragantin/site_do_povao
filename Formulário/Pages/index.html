@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="main">
+        <header>
+            <a href="#"><img class="logo" src="../SVG/logo.svg" alt="logo"></a>
+            <div class="search">
+                <input type="text" placeholder="Pesquisar...">
+                <a href="#"><img src="../SVG/lupa.svg" alt="Lupa"></a>
+            </div>
+            <nav id="menuHeader">
+                <a href="#"><div class="iconHeader"><img src="../SVG/Carrinho.svg" alt="Carrinho">Carrinho</div></a>
+                <a href="#"><div class="iconHeader"><img src="../SVG/Conta.svg" alt="Conta">Conta</div></a></nav>
+
+        </header>
+        <article>
+
+             <!------------------------------Coluna 1----------------------------------->
+
+            <div id="coluna1">
+                <h1>Ja é cadastrado?</h1>
+                <p>Então entre com seus dados</p>
+                <form>
+                    <fieldset>
+                        <legend>Dados da conta</legend>
+                            <label>email:</label>
+                                <input name="email" type="email" placeholder="Ex: joaodasilva@gmail.com" required>
+                            <label>senha:</label>
+                                <input name="senha" type="password" required>
+                    </fieldset> 
+                        <a href="#">Esqueceu sua senha?</a>
+                        <p><strong>Entre com sua conta no Facebook ou Google</strong></p>
+                        <a href="#"><img class="icons" src="../SVG/Google.svg" alt="Google"></a>
+                        <a href="#"><img id="facebook" class="icons" src="../SVG/Facebook.svg" alt="Facebook"></a><br>
+                        <button type="submit">ENTRE</button>
+                </form>
+                    
+            </div>
+
+            <!------------------------------Coluna 2----------------------------------->
+            
+            <div id="coluna2">
+                <h1>Ainda não é cadastrado?</h1>
+                <p>Cadastre agora</p>
+                <form action="">
+                    <fieldset>
+                        <legend>Identificação</legend>
+                        <label for="">email:</label>
+                            <input name="email" type="email" placeholder="Ex: joaodasilva@gmail.com" required>
+                        <label for="">senha:</label>
+                            <input name="senha" type="password" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <label for="">CPF:</label>
+                            <input name="cpf" type="number" placeholder="Ex: 165.657.156-85" required>
+                        <label for="">Estado:</label>
+                    <select name="estados">
+                        <option value="none">----</option>
+                        <option value="acre">Acre</option>
+                        <option value="alagoas">Alagoas</option>
+                        <option value="amapa">Amapá</option>
+                        <option value="amazonas">Amazonas</option>
+                        <option value="bahia">Bahia</option>
+                        <option value="ceara">Ceará</option>
+                        <option value="distrito-federal">Distrito Federal</option>
+                        <option value="espirito-santo">Espirito Santo</option>
+                        <option value="goias">Goiás</option>
+                        <option value="maranhao">Maranhão</option>
+                        <option value="mato-grosso">Mato Grosso</option>
+                        <option value="mato-grosso-do-sul">Mato Grosso do Sul</option>
+                        <option value="minas-gerais">Minas Gerais</option>
+                        <option value="para">Pará</option>
+                        <option value="paraiba">Paraiba</option>
+                        <option value="parana">Paraná</option>
+                        <option value="pernambuco">Pernambuco</option>
+                        <option value="piaui">Piaui</option>
+                        <option value="rio-de-janeiro">Rio de Janeiro</option>
+                        <option value="rio-grande-do-norte">Rio Grande do Norte</option>
+                        <option value="Rio-grande-do-sul">Rio Grande do Sul</option>
+                        <option value="rondonia">Rondônia</option>
+                        <option value="santa-catarina">Santa Catarina</option>
+                        <option value="sao-paulo">São Paulo</option>
+                        <option value="sergipe">Sergipe</option>
+                        <option value="tocantins">Tocantins</option>
+                    </select>
+                        <label>Nome completo:</label>
+                            <input name="nome" type="text" placeholder="Ex: João da Silva" required>
+                        <label for="">Data de nascimento:</label>
+                            <input type="date">
+                        <label>Sexo:</label>
+                        <label>
+                            <input type="radio" name="masculino" value="Masculino" checked>Masculino
+                        </label>
+                        <label>
+                            <input type="radio" name="feminino" value="Feminino">Feminino
+                        </label>
+                    </fieldset>
+                    <button class="coluna1-2" type="submit">CADASTRAR</button>
+                </form>
+                    
+            </div>
+        </article>
+        <footer>
+            <a href="#"><img class="logo footer" src="../SVG/logo.svg" alt="logo"></a>
+            <div>
+                <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>
+                <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>
+                <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
