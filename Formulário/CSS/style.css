@@ -70,7 +70,7 @@ body{
     margin: 0 auto;
     display: grid;
     grid-template-areas: "header header" "article article" "footer footer";
-    grid-template-rows: 30vh auto 30vh;}
+    grid-template-rows: 8% auto 8%;}
 
 /*Header*/
 
@@ -83,7 +83,7 @@ body{
     background-color: var(--cor2);} 
 .logo {
     grid-column: 1;
-    width: 120px;}
+    width: 100px;}
 #main header a {animation: none;}
 #main header div.search {
     grid-column: 2;
