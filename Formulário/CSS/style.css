@@ -28,7 +28,7 @@ p, h1, a, legend, label, button{
     font-family: 'Rancho', sans-serif;}
 a {color: var(--cor4); text-decoration: underline;}
 a:hover {color: var(--cor5);}
-input, button, select{border-radius: 10px;}
+input, button, select{border-radius: 10px; margin: 0 auto;}
 input, select{background-color: var(--cor4); font-size: 1em; color: var(--cor1); padding: .2px 10px;}
 select{color: var(--cor1);}
 input:focus{background-color: var(--cor5);}
@@ -59,7 +59,7 @@ fieldset, p, h1, a, button, .icons {animation-name: var(--name);
 /*Wallpaper*/
 
 body{
-    background-image: url("/Formulário/imagens/background.jpg");
+    background-image: url("../imagens/background.jpg");
     background-size: 100%;}
 
 /*Página*/
@@ -189,7 +189,7 @@ body{
     #main header {display: flex; flex-direction: column;}
     .logo{display: none;}
     #main header div.search {padding: 4px;}
-    #main header div.search input {width: 200px; height: 25px;}
+    #main header div.search input {width: 40%; height: 25px;}
     #main article #coluna2 form {
         display:flex;
         flex-direction: column;}
@@ -198,7 +198,7 @@ body{
     fieldset {padding: 10px 0;}
     form {padding: 0;}
     input, select{max-width: 50%; align-self: center;}
-    footer div {display: flex;}
+    footer div {display: flex; margin: auto auto;}
     .Social{display: block;}
     
 }
