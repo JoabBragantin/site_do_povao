@@ -5,9 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+<style>
+    #facebook {
+    width: 40px;
+    padding: 10px;}
+    #main article {
+        grid-area: article;
+        width: 92%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        padding: 20px;}
+    #main article div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(to bottom, var(--cor3), var(--cor3), var(--cor3), var(--cor4));
+        line-height: 2em;
+        min-width: 40%;
+        border: 2px solid var(--cor2);
+        animation-name: var(--name);
+        animation-delay: var(--delay);
+        animation-duration: var(--time);}
+    @media (max-width: 750px) {
+        #coluna2 form {
+        display:flex;
+        flex-direction: column;
+        padding: 0;}
+        #main article div {
+        width: 80%;}
+        fieldset {padding: 10px 0;}}
+    @media (max-width: 420px){
+    #main {width: fit-content;}
+    #main article {padding: 0; margin: 0;}
+    #main article div {background-image: none; background-color: rgba(155, 165, 172, 0.8); width: 101.5%; }
+    .icons {margin: 0 2px;}}
+</style>
+
 </head>
 <body>
 
