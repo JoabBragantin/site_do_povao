@@ -56,10 +56,13 @@ fieldset, p, h1, a, button, .icons {animation-name: var(--name);
     width: 40px;
     padding: 10px;}
 
+/*Wallpaper*/
+
 body{
     background-image: url("/Formulário/imagens/background.jpg");
     background-size: 100%;}
 
+/*Página*/
 
 #main {
     background-image: linear-gradient(to right, var(--cor6) ,rgba(213,231,242,0.5), var(--cor6)); 
