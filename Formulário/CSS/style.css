@@ -92,6 +92,9 @@ body{
     height: 30px;
     width: 80%;
     border-radius: 10px;}
+#main header div.search input {
+    width: 100%;
+}
 .search a {display: contents;}
 
 #menuHeader {
@@ -138,7 +141,6 @@ body{
 
 @media (max-width:960px){
     #main {width: 95%; margin: 0 auto;}
-    div.search input {width: 100px;}
     #menuHeader .iconHeader{width: 150px; margin: 0 10px;}
     #main article {
         display: flex;
