@@ -5,156 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link rel="icon" href="/Formulário/SVG/logo.svg">
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/styleInicio.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
-    <style>
-        
-        html {scroll-behavior: smooth;}
-        #main {width: 90%;}
-        #main article {
-            grid-area:article;
-            display: grid;
-            grid-template-rows: 1fr 1fr;}
-        
-        /*Slider*/
-
-        #header {
-            margin: 100px auto;
-            width: 100%;}
-        #header > h1 {
-            background-color: var(--cor1);
-            font-size: 3em;
-            width: 100%;
-            margin: 0 auto;}
-        #sliderCanvas {
-            display: flex;
-            width: 100%;
-            height: 100%;
-            margin: 0 auto;
-            background-image: linear-gradient(to bottom, var(--cor5), var(--cor1));
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;}
-        .slider {
-            flex: none;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            scroll-snap-align: start;}
-        #canvasArea {
-            display: flex;
-            align-items: center;}
-
-        /*Imagem principal*/
-
-        .cover {
-            width: 65%;
-            height: 100%;}
-        .cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;}
-
-        /*Descrição*/
-
-        .description {
-            width: 35%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;}
-        .description p, h1, a {
-            line-height: normal;}
-        .description p {font-size: 1.5em;}
-        .screens {
-            display: grid;
-            margin: 10px auto;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            grid-gap: 10px;
-            width: 60%;
-            height: 55%;}
-        .screens img {
-            width: 100%;
-            height: 100%;}
-        .screens img:hover {
-            filter: brightness(120%);}
-        .comprar {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;}
-        .comprar a {
-            text-decoration: none;
-            color: var(--cor2);
-            background-color: var(--cor5);
-            border-radius: 10px;
-            padding: 2px;
-            margin: 2px;
-            line-height: .8em;}
-        .comprar a:hover {
-            background-color: var(--cor4);}
-
-        #article {
-            width: 100%;
-            display: flex;
-            overflow-x: hidden;}    
-           
-        .seções {
-            flex: none;
-            width: 100%;
-            height: auto;
-            background-color: var(--cor2);
-            margin: 100px auto;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;}
-        .seções a.setas{
-            position: relative;
-            text-decoration: none;
-            background-color: var(--cor3);
-            color: var(--cor2);
-            padding: 6px;
-            border-radius: 10px;
-            font-size: 2em;
-            z-index: 1;}
-        .seções div img {
-            width: 100%}
-        .seções div {
-            display: flex;
-            flex-direction: column;
-            background-color: var(--cor1);
-            padding: 4px;}
-
-         @media(max-width: 1070px){
-            .seções {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-            }
-            .seções a.setas {
-                grid-row: 3;
-            }
-         }   
-         @media(max-width: 500px){
-             #main {
-                 width: fit-content;
-                 padding: 6px;
-             }
-             #header .slider {
-                 flex-direction: column;
-             }
-             .description {
-                 width: 100%;
-                 margin: 10px auto;
-             }
-             .screens {display: none;}
-             .cover {width: 100%;}
-
-         }
-
-
-
-    </style>
+    <script>
+        function scrollItens(x, y) {
+         var itens = document.getElementById ("article");
+          itens.scrollBy(x, y);
+        }
+        function scrollCarousel(x, y) {
+         var slider = document.getElementById ("sliderCanvas");
+         slider.scrollBy(x, y);
+        }
+        </script>
 </head>
 <body>
     <section id="main">
@@ -171,8 +36,15 @@
             </header>
         <article>
             <div id="header">
-                <h1>Novidades</h1>
+                <div id="anuncio">
+                    <h1>Silent Hill em oferta!</h1>
+                    <a href="#TitleCanvas">
+                        <img src="/Formulário/SVG/seta.svg" alt="">
+                    </a>
+                </div>
+                <h1 id="TitleCanvas" class="title">Novidades</h1>
                 <div id="canvasArea">
+                    <button onclick="scrollCarousel(-200, 0)"><</button>
                     <div id="sliderCanvas">
                         <div class="slider">
                             <div class="cover">
@@ -232,15 +104,17 @@
                             </div>
                         </div>
                     </div>
+                    <button onclick="scrollCarousel(550, 0)">></button>
                 </div>
-
+            </div>
+                <h1 class="title">Jogos de Xbox 360</h1>
             <div id="article">
                 <section class="seções" id="seção1">
-                    <a class="setas" href="#seção2"><</a>
+                    <button id="botao1" onclick="scrollItens(-1,0)"><</button>
                     <div>
                         <img src="/Formulário/imagens/Itens/Assassins creed 3.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>Assassins Creed 3</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
@@ -250,7 +124,7 @@
                     <div>
                         <img src="/Formulário/imagens/Itens/BattleField 3.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>BattleField 3</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
@@ -260,7 +134,7 @@
                     <div>
                         <img src="/Formulário/imagens/Itens/Far Cry 3.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>Far Cry 3</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
@@ -270,21 +144,19 @@
                     <div>
                         <img src="/Formulário/imagens/Itens/Far Cry 4.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>Far Cry 4</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
                             </div>
                         </div>
                     </div>
-                    <a class="setas" href="#seção2">></a>
                 </section>  
                 <section class="seções" id="seção2">
-                    <a class="setas" href="#seção1"><</a>
                     <div>
                         <img src="/Formulário/imagens/Itens/GTA V.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>GTA 5</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
@@ -294,7 +166,7 @@
                     <div>
                         <img src="/Formulário/imagens/Itens/Dark Souls 2.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>Dark Souls 2</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
@@ -304,7 +176,7 @@
                     <div>
                         <img src="/Formulário/imagens/Itens/Tomb Raider.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>Tomb Raider</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
@@ -314,16 +186,15 @@
                     <div>
                         <img src="/Formulário/imagens/Itens/Left 4 Dead.jpg" alt="">
                         <div class="informations">
-                            <h1></h1>
+                            <h1>Left 4 Dead</h1>
                             <div class="comprar">
                                 <a href="">Comprar</a>
                                 <a href="">Carrinho</a>
                             </div>
                         </div>
                     </div>
-                    <a class="setas" href="#seção1">></a>
+                    <button id="botao2" onclick="scrollItens(650, 0)">></button>
                 </section> 
-            </div>
             </div>
         </article>
         <footer>

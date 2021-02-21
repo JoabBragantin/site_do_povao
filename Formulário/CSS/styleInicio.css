@@ -1,0 +1,204 @@
+html {scroll-behavior: smooth;}
+
+#main {width: 90%;}
+#main article {
+    grid-area:article;
+}
+
+#anuncio {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+    background-image: url("/Formulário/imagens/Silent\ Hill.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#anuncio h1 {
+    color: var(--cor5);
+    font-size: 4em;
+    text-shadow: 6px 10px 5px black;
+}
+#anuncio a > img {
+    width: 40%;
+    margin: 40px;
+    animation-name: loop;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes loop {
+      0% {transform: translateY(0) rotate(-90deg);}
+      50% {transform: translateY(20px) rotate(-90deg);}
+      100% {transform: translate(0) rotate(-90deg);}
+    
+}
+
+
+/*Slider*/
+
+#header {
+    margin: auto;
+    width: 100%;
+}
+.title {
+    background-color: var(--cor1);
+    font-size: 3em;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;}
+#sliderCanvas {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom, var(--cor5), var(--cor1));
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;}
+.slider {
+    flex: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    scroll-snap-align: start;}
+#canvasArea {
+    display: flex;
+    align-items: center;}
+
+/*Imagem principal*/
+
+.cover {
+    width: 65%;
+    height: 100%;}
+.cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;}
+
+/*Descrição*/
+
+.description {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+.description p, h1, a {
+    line-height: normal;}
+.description p {font-size: 1.5em;}
+.screens {
+    display: grid;
+    margin: 10px auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10px;
+    width: 60%;
+    height: 55%;}
+.screens img {
+    width: 100%;
+    height: 100%;}
+.screens img:hover {
+    filter: brightness(120%);}
+.comprar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;}
+.comprar a {
+    text-decoration: none;
+    color: var(--cor2);
+    background-color: var(--cor5);
+    border-radius: 10px;
+    padding: 2px;
+    margin: 2px;
+    line-height: .8em;}
+.comprar a:hover {
+    background-color: var(--cor4);}
+
+    /*Itens*/
+
+#article {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;}    
+
+.seções {
+    flex: none;
+    width: 100%;
+    height: auto;
+    background-color: var(--cor2);
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    scroll-snap-align: start;}
+#botao1 {
+    position: absolute;
+    left: 4%;}
+#botao2 {
+    position: absolute;
+    right: 4%;}
+.seções div img {
+    width: 100%}
+.seções div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor1);
+    padding: 4px;}
+.seções div.informations {width: 100%;}
+.seções div.comprar {
+    width: 80%;
+    margin: 0 auto;
+}
+.seções div.comprar a {width: 80%;}
+
+
+@media(max-width: 1070px){
+    .seções {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+    .seções div {width: 80%; margin: 10px auto; padding: 0;}
+    .seções div > a {width: 100%; margin: 6px auto;}
+    .seções #botao1, #botao2 {
+        display: none;
+    }
+    #article {overflow-x: auto;}
+}   
+@media(max-width: 800px){
+    #main {
+        width: fit-content;
+        padding: 6px;
+    }
+    #anuncio {justify-content: flex-start; height: 300px;}
+    #anuncio h1 {font-size: 3em;}
+    #anuncio a > img {width: 20%;}
+    #header #sliderCanvas {
+        overflow-x: auto;
+    }
+    #header .slider {
+        flex-direction: column;
+    }
+    .description {
+        width: 100%;
+        margin: 10px auto;
+    }
+    .screens {display: none;}
+    .cover {width: 100%; height: 62%}
+
+}
+@media (max-width: 500px){
+    #anuncio {background-size: 200%; justify-content: space-between;}
+    .seções div.informations h1 {font-size: 1.4em;}
+    #canvasArea {display: grid; grid-template-rows: auto 1fr; grid-template-columns: 1fr 1fr;}
+    #sliderCanvas {grid-column: 1 / 3; height: 100%;}
+    #canvasArea button {grid-row: 2; align-self: start;;}
+}
