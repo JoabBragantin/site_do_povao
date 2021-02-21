@@ -9,26 +9,325 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
     <style>
-        #main article {grid-area:article;}
+        
+        html {scroll-behavior: smooth;}
+        #main {width: 90%;}
+        #main article {
+            grid-area:article;
+            display: grid;
+            grid-template-rows: 1fr 1fr;}
+        
+        /*Slider*/
+
+        #header {
+            margin: 100px auto;
+            width: 100%;}
+        #header > h1 {
+            background-color: var(--cor1);
+            font-size: 3em;
+            width: 100%;
+            margin: 0 auto;}
+        #sliderCanvas {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            background-image: linear-gradient(to bottom, var(--cor5), var(--cor1));
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;}
+        .slider {
+            flex: none;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            scroll-snap-align: start;}
+        #canvasArea {
+            display: flex;
+            align-items: center;}
+
+        /*Imagem principal*/
+
+        .cover {
+            width: 65%;
+            height: 100%;}
+        .cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;}
+
+        /*Descrição*/
+
+        .description {
+            width: 35%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;}
+        .description p, h1, a {
+            line-height: normal;}
+        .description p {font-size: 1.5em;}
+        .screens {
+            display: grid;
+            margin: 10px auto;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-gap: 10px;
+            width: 60%;
+            height: 55%;}
+        .screens img {
+            width: 100%;
+            height: 100%;}
+        .screens img:hover {
+            filter: brightness(120%);}
+        .comprar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;}
+        .comprar a {
+            text-decoration: none;
+            color: var(--cor2);
+            background-color: var(--cor5);
+            border-radius: 10px;
+            padding: 2px;
+            margin: 2px;
+            line-height: .8em;}
+        .comprar a:hover {
+            background-color: var(--cor4);}
+
+        #article {
+            width: 100%;
+            display: flex;
+            overflow-x: hidden;}    
+           
+        .seções {
+            flex: none;
+            width: 100%;
+            height: auto;
+            background-color: var(--cor2);
+            margin: 100px auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;}
+        .seções a.setas{
+            position: relative;
+            text-decoration: none;
+            background-color: var(--cor3);
+            color: var(--cor2);
+            padding: 6px;
+            border-radius: 10px;
+            font-size: 2em;
+            z-index: 1;}
+        .seções div img {
+            width: 100%}
+        .seções div {
+            display: flex;
+            flex-direction: column;
+            background-color: var(--cor1);
+            padding: 4px;}
+
+         @media(max-width: 1070px){
+            .seções {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            .seções a.setas {
+                grid-row: 3;
+            }
+         }   
+         @media(max-width: 500px){
+             #main {
+                 width: fit-content;
+                 padding: 6px;
+             }
+             #header .slider {
+                 flex-direction: column;
+             }
+             .description {
+                 width: 100%;
+                 margin: 10px auto;
+             }
+             .screens {display: none;}
+             .cover {width: 100%;}
+
+         }
+
+
+
     </style>
 </head>
 <body>
     <section id="main">
             <header>
-                <a href="#"><img class="logo" src="SVG/logo.svg" alt="logo"></a>
+                <a href="index.html"><img class="logo" src="SVG/logo.svg" alt="logo"></a>
                 <div class="search">
                     <input type="text" placeholder="Pesquisar...">
                     <a href="#"><img src="SVG/lupa.svg" alt="Lupa"></a>
                 </div>
                 <nav id="menuHeader">
                     <a href="#"><div class="iconHeader"><img src="SVG/Carrinho.svg" alt="Carrinho">Carrinho</div></a>
-                    <a href="#"><div class="iconHeader"><img src="SVG/Conta.svg" alt="Conta">Conta</div></a></nav>
+                    <a href="/Formulário/Pages/form.html"><div class="iconHeader"><img src="SVG/Conta.svg" alt="Conta">Conta</div></a></nav>
     
             </header>
         <article>
+            <div id="header">
+                <h1>Novidades</h1>
+                <div id="canvasArea">
+                    <div id="sliderCanvas">
+                        <div class="slider">
+                            <div class="cover">
+                                <img src="../Formulário/imagens/GTA SA/Gta SA.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <h1>GTA SA</h1>
+                                <p>50,00</p>
+                                <div class="screens">
+                                    <img src="../Formulário/imagens/GTA SA/Gta SA screen.jpg" alt="">
+                                    <img src="../Formulário/imagens/GTA SA/Gta SA screen2.jpg" alt="">
+                                    <img src="../Formulário/imagens//GTA SA/Gta SA screen3.jpg" alt="">
+                                    <img src="../Formulário/imagens//GTA SA/Gta SA screen4.jpg" alt="">
+                                </div>  
+                                <div class="comprar">
+                                    <a href="">Comprar</a>
+                                    <a href="">Adicionar ao carrinho</a>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="cover">
+                                <img src="../Formulário/imagens//NFS/Need for Speed.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <h1>Need For Speed <strong>Payback</strong></h1>
+                                <p>50,00</p>
+                                <div class="screens">
+                                    <img src="../Formulário/imagens/NFS/Need for Speed screen1.jpg" alt="">
+                                    <img src="../Formulário/imagens/NFS/Need for Speed screen2.jpg" alt="">
+                                    <img src="../Formulário/imagens/NFS/Need for Speed screen3.jpg" alt="">
+                                    <img src="../Formulário/imagens/NFS/Need for Speed screen4.jpg" alt="">
+                                </div>  
+                                <div class="comprar">
+                                    <a href="">Comprar</a>
+                                    <a href="">Adicionar ao carrinho</a>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="cover">
+                                <img src="../Formulário/imagens/The Legend of Zelda/The Legend of Zelda.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <h1>The Legend of Zelda</h1>
+                                <p>50,00</p>
+                                <div class="screens">
+                                    <img src="../Formulário/imagens/The Legend of Zelda/The Legend of Zelda screen1.jpg" alt="">
+                                    <img src="../Formulário/imagens/The Legend of Zelda/The Legend of Zelda screen2.jpg" alt="">
+                                    <img src="../Formulário/imagens/The Legend of Zelda/The Legend of Zelda screen3.jpg" alt="">
+                                    <img src="../Formulário/imagens/The Legend of Zelda/The Legend of Zelda screen4.jpg" alt="">
+                                </div>  
+                                <div class="comprar">
+                                    <a href="">Comprar</a>
+                                    <a href="">Adicionar ao carrinho</a>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <div id="article">
+                <section class="seções" id="seção1">
+                    <a class="setas" href="#seção2"><</a>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/Assassins creed 3.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/BattleField 3.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/Far Cry 3.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/Far Cry 4.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="setas" href="#seção2">></a>
+                </section>  
+                <section class="seções" id="seção2">
+                    <a class="setas" href="#seção1"><</a>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/GTA V.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/Dark Souls 2.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/Tomb Raider.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/Formulário/imagens/Itens/Left 4 Dead.jpg" alt="">
+                        <div class="informations">
+                            <h1></h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="setas" href="#seção1">></a>
+                </section> 
+            </div>
+            </div>
         </article>
         <footer>
-            <a href="#"><img class="logo footer" src="SVG/logo.svg" alt="logo"></a>
+            <a href="index.html"><img class="logo footer" src="SVG/logo.svg" alt="logo"></a>
             <div>
                 <a href="#"><img class="logo Social" src="SVG/Facebook.svg" alt="Redes Sociais"></a>
                 <a href="#"><img class="logo Social" src="SVG/Facebook.svg" alt="Redes Sociais"></a>
