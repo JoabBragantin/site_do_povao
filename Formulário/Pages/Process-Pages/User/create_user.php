@@ -14,5 +14,6 @@ $worked = CREATE_USER($cpf, $nome, $email, $senha, $sexo, $estado, $dataNascimen
 if (!$worked) {
     echo "Erro ao inserir o usuário";
 } else {
-    echo "SUCESSO ao inserir";
+    header('Location: ../../form.html');
+    exit;
 }
