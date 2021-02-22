@@ -5,15 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+<style>
+    #facebook {
+    width: 40px;
+    padding: 10px;}
+    #main article {
+        grid-area: article;
+        width: 92%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        padding: 20px;}
+    #main article div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: linear-gradient(to bottom, var(--cor3), var(--cor3), var(--cor3), var(--cor4));
+        line-height: 2em;
+        min-width: 40%;
+        border: 2px solid var(--cor2);
+        animation-name: var(--name);
+        animation-delay: var(--delay);
+        animation-duration: var(--time);}
+    @media (max-width: 960px){
+    #main article {
+        display: flex;
+        flex-direction: column;}
+    #main article div {
+        margin: 20px auto;
+        min-width: 50%;
+        padding: 10px;}
+    #coluna2 form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        grid-gap: 10px}
+    .coluna1-2{grid-column: 1 / 3;}}
+    @media (max-width: 750px) {
+        #coluna2 form {
+        display:flex;
+        flex-direction: column;
+        padding: 0;}
+        #main article div {
+        width: 80%;}
+        fieldset {padding: 10px 0;}}
+    @media (max-width: 420px){
+    #main {width: fit-content;}
+    #main article {padding: 0; margin: 0;}
+    #main article div {background-image: none; background-color: rgba(155, 165, 172, 0.8); width: 101.5%; }
+    .icons {margin: 0 2px;}}
+</style>
+
 </head>
 <body>
 
     <section id="main">
         <header>
-            <a href="#"><img class="logo" src="../SVG/logo.svg" alt="logo"></a>
+            <a href="/Formulário/index.html"><img class="logo" src="../SVG/logo.svg" alt="logo"></a>
             <div class="search">
                 <input type="text" placeholder="Pesquisar...">
                 <a href="#"><img src="../SVG/lupa.svg" alt="Lupa"></a>
@@ -52,7 +105,7 @@
             <div id="coluna2">
                 <h1>Ainda não é cadastrado?</h1>
                 <p>Cadastre agora</p>
-                <form action="">
+                <form action="Process-Pages/User/create_user.php" method="POST">
                     <fieldset>
                         <legend>Identificação</legend>
                         <label for="">email:</label>
@@ -67,43 +120,43 @@
                         <label for="">Estado:</label>
                     <select name="estados">
                         <option value="none">----</option>
-                        <option value="acre">Acre</option>
-                        <option value="alagoas">Alagoas</option>
-                        <option value="amapa">Amapá</option>
-                        <option value="amazonas">Amazonas</option>
-                        <option value="bahia">Bahia</option>
-                        <option value="ceara">Ceará</option>
-                        <option value="distrito-federal">Distrito Federal</option>
-                        <option value="espirito-santo">Espirito Santo</option>
-                        <option value="goias">Goiás</option>
-                        <option value="maranhao">Maranhão</option>
-                        <option value="mato-grosso">Mato Grosso</option>
-                        <option value="mato-grosso-do-sul">Mato Grosso do Sul</option>
-                        <option value="minas-gerais">Minas Gerais</option>
-                        <option value="para">Pará</option>
-                        <option value="paraiba">Paraiba</option>
-                        <option value="parana">Paraná</option>
-                        <option value="pernambuco">Pernambuco</option>
-                        <option value="piaui">Piaui</option>
-                        <option value="rio-de-janeiro">Rio de Janeiro</option>
-                        <option value="rio-grande-do-norte">Rio Grande do Norte</option>
-                        <option value="Rio-grande-do-sul">Rio Grande do Sul</option>
-                        <option value="rondonia">Rondônia</option>
-                        <option value="santa-catarina">Santa Catarina</option>
-                        <option value="sao-paulo">São Paulo</option>
-                        <option value="sergipe">Sergipe</option>
-                        <option value="tocantins">Tocantins</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraiba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piaui</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
                     </select>
                         <label>Nome completo:</label>
                             <input name="nome" type="text" placeholder="Ex: João da Silva" required>
                         <label for="">Data de nascimento:</label>
-                            <input type="date">
+                            <input name="dataNascimento" type="date">
                         <label>Sexo:</label>
                         <label>
-                            <input type="radio" name="masculino" value="Masculino" checked>Masculino
+                            <input type="radio" name="textSexo" value="M" checked>Masculino
                         </label>
                         <label>
-                            <input type="radio" name="feminino" value="Feminino">Feminino
+                            <input type="radio" name="textSexo" value="F">Feminino
                         </label>
                     </fieldset>
                     <button class="coluna1-2" type="submit">CADASTRAR</button>
@@ -112,7 +165,7 @@
             </div>
         </article>
         <footer>
-            <a href="#"><img class="logo footer" src="../SVG/logo.svg" alt="logo"></a>
+            <a href="/Formulário/index.html"><img class="logo footer" src="../SVG/logo.svg" alt="logo"></a>
             <div>
                 <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>
                 <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>

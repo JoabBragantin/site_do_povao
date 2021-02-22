@@ -37,7 +37,7 @@ button:hover{background-color: var(--cor3); color: var(--cor2);}
 fieldset {
     display: flex;
     flex-direction: column;
-    padding: 40px;
+    padding: 20px;
     border: 2px solid var(--cor2);}
 legend, h1, strong{color: var(--cor2);}
 form {text-align: center; width: 95%;}
@@ -52,9 +52,7 @@ fieldset, p, h1, a, button, .icons {animation-name: var(--name);
     padding: 5px;
     margin: 0 40px;}
 .icons:hover{background-color: var(--cor3);}
-#facebook {
-    width: 40px;
-    padding: 10px;}
+
 
 /*Wallpaper*/
 
@@ -70,7 +68,7 @@ body{
     margin: 0 auto;
     display: grid;
     grid-template-areas: "header header" "article article" "footer footer";
-    grid-template-rows: 8% auto 8%;}
+    grid-template-rows: 120px auto 120px;}
 
 /*Header*/
 
@@ -94,6 +92,9 @@ body{
     height: 30px;
     width: 80%;
     border-radius: 10px;}
+#main header div.search input {
+    width: 100%;
+}
 .search a {display: contents;}
 
 #menuHeader {
@@ -115,29 +116,6 @@ body{
     color: var(--cor2);}
 #menuHeader .iconHeader:hover {background-color: var(--cor4)}
 #menuHeader img {width: 40px;}
-
-
-/*Article*/
-
-#main article {
-    grid-area: article;
-    width: 92%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    padding: 20px;}
-#main article div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: linear-gradient(to bottom, var(--cor3), var(--cor3), var(--cor3), var(--cor4));
-    line-height: 2em;
-    min-width: 40%;
-    border: 2px solid var(--cor2);
-    animation-name: var(--name);
-    animation-delay: var(--delay);
-    animation-duration: var(--time);}
 
 /*Footer*/
 
@@ -161,26 +139,9 @@ body{
 
 /*Modo resposivo*/
 
-@media (max-width:1150px){
-    div.search input {width: 100px;}
-    #menuHeader .iconHeader{width: 150px; margin: 0 10px;}
-    #main article {
-        display: flex;
-        flex-direction: column;
-        align-items: center;}
-    #main article div {
-        margin: 20px 0;
-        min-width: 50%;
-        padding: 10px;}
-    #coluna2 form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-        grid-gap: 10px}
-    .coluna1-2{grid-column: 1 / 3;}
-}
-@media (max-width: 900px){
+@media (max-width:960px){
     #main {width: 95%; margin: 0 auto;}
+    #menuHeader .iconHeader{width: 150px; margin: 0 10px;}
 }
 @media (max-width: 750px){
 
@@ -190,21 +151,9 @@ body{
     .logo{display: none;}
     #main header div.search {padding: 4px;}
     #main header div.search input {width: 40%; height: 25px;}
-    #main article #coluna2 form {
-        display:flex;
-        flex-direction: column;}
-    #main article div {
-        width: 80%;}
-    fieldset {padding: 10px 0;}
-    form {padding: 0;}
     input, select{max-width: 50%; align-self: center;}
     footer div {display: flex; margin: auto auto;}
     .Social{display: block;}
     
-}
-@media (max-width: 400px){
-    #main article {padding: 2px;}
-    #main article div {background-image: none; background-color: rgba(155, 165, 172, 0.8); width: 100%;}
-    .icons {margin: 0 2px;}
 }
 

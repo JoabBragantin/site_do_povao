@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="SVG/logo.svg">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/styleInicio.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <script>
+        function scrollItens(x, y) {
+         var itens = document.getElementById ("article");
+          itens.scrollBy(x, y);
+        }
+        function scrollCarousel(x, y) {
+         var slider = document.getElementById ("sliderCanvas");
+         slider.scrollBy(x, y);
+        }
+        </script>
+</head>
+<body>
+    <section id="main">
+            <header>
+                <a href="index.html"><img class="logo" src="SVG/logo.svg" alt="logo"></a>
+                <div class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <a href="#"><img src="SVG/lupa.svg" alt="Lupa"></a>
+                </div>
+                <nav id="menuHeader">
+                    <a href="#"><div class="iconHeader"><img src="SVG/Carrinho.svg" alt="Carrinho">Carrinho</div></a>
+                    <a href="Pages/form.html"><div class="iconHeader"><img src="SVG/Conta.svg" alt="Conta">Conta</div></a></nav>
+    
+            </header>
+        <article>
+
+            <!---------------------------------------------------->
+
+            <!--Carousel e Anúncio-->
+
+            <div id="header">
+
+                <!--Anúncio-->
+
+                <div id="anuncio">
+                    <h1>Silent Hill em oferta!</h1>
+                    <a href="#TitleCanvas">
+                        <img src="SVG/seta.svg" alt="">
+                    </a>
+                </div>
+
+                <!--Carousel-->
+
+                <h1 id="TitleCanvas" class="title">Novidades</h1>
+
+                <div id="canvasArea">
+                    <button onclick="scrollCarousel(-200, 0)"><</button>
+                    <div id="sliderCanvas">
+
+                        <!--Conteúdo-->
+
+                        <div class="slider">
+                            <div class="cover">
+                                <img src="imagens/GTA SA/Gta SA.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <h1>GTA SA</h1>
+                                <p>50,00</p>
+                                <div class="screens">
+                                    <img src="imagens/GTA SA/Gta SA screen.jpg" alt="">
+                                    <img src="imagens/GTA SA/Gta SA screen2.jpg" alt="">
+                                    <img src="imagens//GTA SA/Gta SA screen3.jpg" alt="">
+                                    <img src="imagens//GTA SA/Gta SA screen4.jpg" alt="">
+                                </div>  
+                                <div class="comprar">
+                                    <a href="">Comprar</a>
+                                    <a href="">Adicionar ao carrinho</a>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="cover">
+                                <img src="imagens//NFS/Need for Speed.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <h1>Need For Speed <strong>Payback</strong></h1>
+                                <p>50,00</p>
+                                <div class="screens">
+                                    <img src="imagens/NFS/Need for Speed screen1.jpg" alt="">
+                                    <img src="imagens/NFS/Need for Speed screen2.jpg" alt="">
+                                    <img src="imagens/NFS/Need for Speed screen3.jpg" alt="">
+                                    <img src="imagens/NFS/Need for Speed screen4.jpg" alt="">
+                                </div>  
+                                <div class="comprar">
+                                    <a href="">Comprar</a>
+                                    <a href="">Adicionar ao carrinho</a>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="slider">
+                            <div class="cover">
+                                <img src="imagens/The Legend of Zelda/The Legend of Zelda.jpg" alt="">
+                            </div>
+                            <div class="description">
+                                <h1>The Legend of Zelda</h1>
+                                <p>50,00</p>
+                                <div class="screens">
+                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen1.jpg" alt="">
+                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen2.jpg" alt="">
+                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen3.jpg" alt="">
+                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen4.jpg" alt="">
+                                </div>  
+                                <div class="comprar">
+                                    <a href="">Comprar</a>
+                                    <a href="">Adicionar ao carrinho</a>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <button onclick="scrollCarousel(550, 0)">></button>
+                </div>
+            </div>
+
+            <!--/Carousel-->
+
+            <!---------------------------------------------------->
+                <h1 class="title">Jogos de Xbox 360</h1>
+            <!---------------------------------------------------->
+
+            <!--Itens-->
+            
+            <div id="article">
+
+                <!--Seção1-->
+                
+
+                <section class="seções" id="seção1">
+                    <button id="botao1" onclick="scrollItens(-1,0)"><</button>
+
+                    <!--Conteúdo-->
+
+                    <div>
+                        <img src="imagens/Itens/Assassins creed 3.jpg" alt="">
+                        <div class="informations">
+                            <h1>Assassins Creed 3</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imagens/Itens/BattleField 3.jpg" alt="">
+                        <div class="informations">
+                            <h1>BattleField 3</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imagens/Itens/Far Cry 3.jpg" alt="">
+                        <div class="informations">
+                            <h1>Far Cry 3</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imagens/Itens/Far Cry 4.jpg" alt="">
+                        <div class="informations">
+                            <h1>Far Cry 4</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>  
+
+                <!--Seção2-->
+
+                <section class="seções" id="seção2">
+
+                    <!--Conteúdo-->
+
+                    <div>
+                        <img src="imagens/Itens/GTA V.jpg" alt="">
+                        <div class="informations">
+                            <h1>GTA 5</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imagens/Itens/Dark Souls 2.jpg" alt="">
+                        <div class="informations">
+                            <h1>Dark Souls 2</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imagens/Itens/Tomb Raider.jpg" alt="">
+                        <div class="informations">
+                            <h1>Tomb Raider</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="imagens/Itens/Left 4 Dead.jpg" alt="">
+                        <div class="informations">
+                            <h1>Left 4 Dead</h1>
+                            <div class="comprar">
+                                <a href="">Comprar</a>
+                                <a href="">Carrinho</a>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="botao2" onclick="scrollItens(650, 0)">></button>
+                </section> 
+            </div>
+
+            <!--Itens-->
+
+            <!---------------------------------------------------->
+        </article>
+        <footer>
+            <a href="index.html"><img class="logo footer" src="SVG/logo.svg" alt="logo"></a>
+            <div>
+                <a href="#"><img class="logo Social" src="SVG/Facebook.svg" alt="Redes Sociais"></a>
+                <a href="#"><img class="logo Social" src="SVG/Facebook.svg" alt="Redes Sociais"></a>
+                <a href="#"><img class="logo Social" src="SVG/Facebook.svg" alt="Redes Sociais"></a>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
