@@ -5,7 +5,7 @@ require "connection.php";
 /*Inserir produto */
 function CREATE_PRODUCT ($user=NULL, $nome, $descricao, $preco, $produtora, $dataLancamento) {
     $command = "INSERT INTO product(user, nome, descricao, preco, produtora, dataLancamento) 
-    VALUES ($user, '$nome', '$descricao', $preco, '$produtora', $dataLancamento)";
+    VALUES ($user, '$nome', '$descricao', $preco, '$produtora', '$dataLancamento')";
 
     $worked = mysqli_query(con(), $command);
 

@@ -5,7 +5,7 @@ require_once "connection.php";
 /*Inserir usuário*/
 function CREATE_USER ($cpf, $nome, $email, $senha, $sexo, $estado, $dataNascimento) {
     $command = "INSERT INTO user(cpf, nome, email, senha, sexo, estado, dataNascimento) 
-    VALUES ($cpf, '$nome', '$email', '$senha', '$sexo', '$estado', $dataNascimento)";
+    VALUES ($cpf, '$nome', '$email', '$senha', '$sexo', '$estado', '$dataNascimento')";
 
     $worked = mysqli_query(con(), $command);
     
