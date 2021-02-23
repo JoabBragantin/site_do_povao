@@ -14,6 +14,7 @@ CREATE TABLE product (
     user INTEGER NULL,
     nome VARCHAR(45) NOT NULL,
     descricao TEXT NOT NULL,
+    imagem LONGBLOB NOT NULL,
     preco DECIMAL(4,2) NOT NULL,
     produtora VARCHAR(20) NOT NULL,
     dataLancamento DATE NOT NULL,
