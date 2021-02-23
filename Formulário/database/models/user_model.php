@@ -38,7 +38,7 @@ function SHOW_USER ($cpf) {
 /*Atualizar usuário*/
 function UPDATE_USER ($cpf, $nome, $email, $senha, $sexo, $estado, $dataNascimento) {
     $command = "UPDATE user SET nome='$nome', email='$email', senha='$senha', sexo='$sexo',
-    estado='$estado', dataNascimento=$dataNascimento WHERE cpf=$cpf";
+    estado='$estado', dataNascimento='$dataNascimento' WHERE cpf=$cpf";
 
     $worked = mysqli_query(con(), $command);
 
