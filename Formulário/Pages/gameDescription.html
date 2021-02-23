@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    <style>
+        #main article {grid-area: article;}
+        #header {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #firstImpression {
+            width: 90%;
+            height: 80%;
+            background-color: var(--cor6);
+            display: flex;
+            justify-content: space-between;
+        }
+        #screenShots {
+            background-color: var(--cor2);
+            width: 62%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #screenShots video{
+            height: 100%;
+        }
+        #description {
+            background-color: var(--cor2);
+            width: 34%;
+            overflow-y: auto;
+            padding: 6px;
+        }
+        #description img, p, li{
+            width: 100%;
+            line-height: normal;
+            font-size: 1.2em;
+            color: var(--cor4);
+            text-align: start;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul {list-style: none;}
+        li span {
+            color: var(--cor5);
+            font-size: .9em;
+        }
+        #comprar {
+            background-color: var(--cor1);
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 40px auto;
+            padding: 0 40px;
+            border-radius: 10px;
+        }
+        h1 {
+            color: var(--cor4);
+            font-size: 1.5em;
+        }
+        #carrinho {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 48%;
+            height: auto;
+            background-color: var(--cor2);
+            position: relative;
+            top: 30px;
+            right: 6px;
+            font-size: .8em;
+            border-radius: 10px;
+        }
+        #carrinho p {
+            width: auto;
+        }
+        #carrinho a {
+            text-decoration: none;
+            background-color: var(--cor1);
+        }
+        #carrinho a:hover {
+            filter: brightness(1.4);
+        }
+        #about {
+            background-color: var(--cor2);
+            width: 80%;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        #about p {
+            line-height: 30px;
+        }
+        #requirements {
+            margin-top: 150px;
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
+        .minMax ul li {
+            line-height: 40px;
+        }
+        .minMax {
+            background-color: var(--cor2);
+            width: 40%;
+            padding: 20px;
+        }
+        @media (max-width: 600px){
+            #firstImpression {
+                flex-direction: column;
+                width: 100%;
+            }
+            #screenShots {
+                width: 100%;
+                height: 170%;
+            }
+            #screenShots video {
+                height: 100%;
+                margin: 0 auto;
+            }
+            #description {
+                width: 80%;
+                margin: 0 auto;
+            }
+            #requirements {
+                flex-direction: column;
+            }
+            .minMax {
+                width: 80%;
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="main">
+            <header>
+                <a href="../index.html"><img class="logo" src="../SVG/logo.svg" alt="logo"></a>
+                <div class="search">
+                    <input type="text" placeholder="Pesquisar...">
+                    <a href="#"><img src="../SVG/lupa.svg" alt="Lupa"></a>
+                </div>
+                <nav id="menuHeader">
+                    <a href="#"><div class="iconHeader"><img src="../SVG/Carrinho.svg" alt="Carrinho">Carrinho</div></a>
+                    <a href="#"><div class="iconHeader"><img src="../SVG/Conta.svg" alt="Conta">Conta</div></a></nav>
+            </header>
+        <article>
+            <div id="header">
+                <div id="firstImpression">
+                    <div id="screenShots">
+                        <video autoplay controls>
+                            <source src="../Videos/videoplayback.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div id="description">
+                        <img src="../imagens/GTA SA/Gta SA.jpg" alt="">
+                        <p>Grand Theft Auto: San Andreas é um jogo eletrônico
+                           de ação-aventura desenvolvido pela Rockstar North
+                           e publicado pela Rockstar Games.</p>
+                           <br>
+                        <ul>
+                            <li>Data de lançamento: <span>26 de outubro de 2004.</span></li>
+                            <li>Plataformas: <span>PlayStation 2, Xbox 360, Xbox.</span></li>
+                            <li>Desenvolvedores: <span>Rockstar Games, Rockstar North, War Drum Studios.</span></li>
+                            <li>Analises: <span>Ótimas.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="comprar">
+                <h1>GTA San Andreas</h1>
+                <div id="carrinho">
+                    <p>R$50,00</p>
+                    <a href="">+Carrinho</a>
+                </div>
+            </div>
+            <div id="about">
+                <h1>Sobre o Jogo</h1>
+                <p>Cinco anos atrás Carl Johnson escapou das pressões da vida em Los Santos, San Andreas... uma cidade que se divide em problemas como gangues, drogas e corrupção. Onde estrelas e milionários fazem seu melhor para esquivar dos negociantes e líderes de gangues.
+                    Agora, é o comeco dos anos 90. Carl's decide voltar para casa. Sua mãe foi assassinada, sua família se despedaçou e seus amigos de infância estão todos seguindo rumo ao desastre.
+                    Em seu retorno para a vizinhança, uma dupla de policiais corruptos o acusam de homicídio. CJ se ve forçado a entrar em uma jornada que atravessa o estado de San Andreas, para salvar sua família e recuperar o controle das ruas.
+                    </p>
+            </div>
+            <div id="requirements">
+                <div class="minMax">
+                    <ul>
+                        <li>Minimo</li>
+                        <li>OS:<span>Microsoft® Windows® 2000/XP.</span></li>
+                        <li>Processador:<span>1Ghz Pentium III ou Processador AMD Athlon.</span></li>
+                        <li>Memoria:<span>256MB de RAM.</span></li>
+                        <li>Gráficos:<span>64MB de Placa de Vídeo (Geforce 3 or better).</span></li>
+                        <li>Armazenamento:<span>3.6GB de espaço livre no sistema(minimo para instalar).</span></li>
+                    </ul>
+                </div>
+                <div class="minMax">
+                    <ul>
+                        <li>Recomendado</li>
+                        <li>Processador:<span>Intel Pentium 4 ou Processador AMD Athlon XP.</span></li>
+                        <li>Memoria:<span>384MB de RAM (Quanto mais, melhor!).</span></li>
+                        <li>Gráficos:<span>128MB de Placa de video (Linha da Geforce 6 recomendada).</span></li>
+                        <li>Armazenamento:<span>4.7GB de espaço livre no sistema (instalação completa).</span></li>
+                        <li>Placa de som:<span>DirectX 9 compativel com a Placa de Som (Sound Blaster Auidgy 2 Recomendado).</span></li>
+                    </ul>
+                </div>
+            </div>
+
+
+        </article>
+        <footer>
+            <a href="../index.html"><img class="logo footer" src="../SVG/logo.svg" alt="logo"></a>
+            <div>
+                <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>
+                <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>
+                <a href="#"><img class="logo Social" src="../SVG/Facebook.svg" alt="Redes Sociais"></a>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
