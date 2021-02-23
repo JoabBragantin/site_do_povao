@@ -15,13 +15,20 @@ CREATE TABLE user (
 
 CREATE TABLE product (
     idProduto INTEGER NOT NULL AUTO_INCREMENT,
-    idUser BIGINT NULL,
     nome VARCHAR(45) NOT NULL,
     descricao TEXT NOT NULL,
     imagem LONGBLOB NOT NULL,
     preco DECIMAL(4,2) NOT NULL,
     produtora VARCHAR(20) NOT NULL,
     dataLancamento DATE NOT NULL,
-    PRIMARY KEY (idProduto),
-    FOREIGN KEY (idUser) REFERENCES user (cpf)
+    PRIMARY KEY (idProduto)
+);
+
+CREATE TABLE products_users (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    user BIGINT NOT NULL,
+    product INTEGER NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user) REFERENCES user(cpf),
+    FOREIGN KEY (product) REFERENCES product(idProduto)
 );

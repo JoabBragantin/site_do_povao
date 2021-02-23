@@ -1,7 +1,6 @@
 <?php
 require "../../../database/models/product_model.php";
 
-$user = $_POST['usuario'];
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
 $imagem = $_POST['imagem'];
