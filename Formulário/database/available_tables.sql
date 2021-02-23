@@ -1,7 +1,8 @@
-CREATE DATABASE IF NOT EXISTS site_do_povao;
+DROP DATABASE IF EXISTS site_do_povao;
+CREATE DATABASE site_do_povao;
 USE site_do_povao;
 
-CREATE TABLE IF NOT EXISTS user (
+CREATE TABLE user (
     cpf BIGINT NOT NULL,
     nome VARCHAR(45) NOT NULL,
     email VARCHAR(45) NOT NULL,
@@ -12,16 +13,15 @@ CREATE TABLE IF NOT EXISTS user (
     PRIMARY KEY (cpf)
 );
 
-CREATE TABLE IF NOT EXISTS product (
+CREATE TABLE product (
     idProduto INTEGER NOT NULL AUTO_INCREMENT,
-    user INTEGER NULL,
+    idUser BIGINT NULL,
     nome VARCHAR(45) NOT NULL,
     descricao TEXT NOT NULL,
     imagem LONGBLOB NOT NULL,
     preco DECIMAL(4,2) NOT NULL,
     produtora VARCHAR(20) NOT NULL,
     dataLancamento DATE NOT NULL,
-    
     PRIMARY KEY (idProduto),
-    FOREIGN KEY (user) REFERENCES user(cpf)
+    FOREIGN KEY (idUser) REFERENCES user (cpf)
 );

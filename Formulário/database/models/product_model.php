@@ -3,9 +3,9 @@
 require "connection.php";
 
 /*Inserir produto */
-function CREATE_PRODUCT ($user=NULL, $nome, $descricao, $preco, $produtora, $dataLancamento) {
-    $command = "INSERT INTO product(user, nome, descricao, preco, produtora, dataLancamento) 
-    VALUES ($user, '$nome', '$descricao', $preco, '$produtora', '$dataLancamento')";
+function CREATE_PRODUCT ($user=NULL, $nome, $descricao, $imagem, $preco, $produtora, $dataLancamento) {
+    $command = "INSERT INTO product(user, nome, descricao, imagem, preco, produtora, dataLancamento) 
+    VALUES ($user, '$nome', '$descricao', $imagem, $preco, '$produtora', '$dataLancamento')";
 
     $worked = mysqli_query(con(), $command);
 
@@ -36,8 +36,8 @@ function SHOW_PRODUCT ($idProduto) {
 }
 
 /*Atualizar produto */
-function UPDATE_PRODUCT ($idProduto, $nome, $descricao, $preco, $produtora, $dataLancamento) {
-    $command = "UPDATE product SET nome='$nome', descricao='$descricao', preco=$preco,
+function UPDATE_PRODUCT ($idProduto, $nome, $descricao, $imagem, $preco, $produtora, $dataLancamento) {
+    $command = "UPDATE product SET nome='$nome', descricao='$descricao', imagem=$imagem, preco=$preco,
     produtora='$produtora', dataLancamento=$dataLancamento WHERE idProduto=$idProduto";
 
     $worked = mysqli_query(con(), $command);
