@@ -1,4 +1,7 @@
-CREATE TABLE user (
+CREATE DATABASE IF NOT EXISTS site_do_povao;
+USE site_do_povao;
+
+CREATE TABLE IF NOT EXISTS user (
     cpf BIGINT NOT NULL,
     nome VARCHAR(45) NOT NULL,
     email VARCHAR(45) NOT NULL,
@@ -9,7 +12,7 @@ CREATE TABLE user (
     PRIMARY KEY (cpf)
 );
 
-CREATE TABLE product (
+CREATE TABLE IF NOT EXISTS product (
     idProduto INTEGER NOT NULL AUTO_INCREMENT,
     user INTEGER NULL,
     nome VARCHAR(45) NOT NULL,
