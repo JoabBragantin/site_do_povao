@@ -15,5 +15,5 @@ if (!$worked) {
     echo "Erro ao inserir o usuário";
 } else {
     header('Location: ../../form.html');
-    exit;
+    exit();
 }
