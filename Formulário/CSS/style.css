@@ -9,6 +9,17 @@
 --cor5: #F2DEA0;
 --cor6: #ffffff50;}
 
+
+/*ScrollBar*/
+::-webkit-scrollbar {
+    background-color: var(--cor1);
+}
+::-webkit-scrollbar-thumb {
+    background-image: radial-gradient(var(--cor3), var(--cor4)) ;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
 /*Animação*/
 :root {
     --name: transition;
