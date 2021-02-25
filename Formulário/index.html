@@ -53,16 +53,16 @@
 
                         <div class="slider">
                             <div class="cover">
-                                <a href="Pages/gameDescription.html"><img id="coverImg" src="imagens/GTA SA/Gta SA.jpg" alt=""></a>
+                                <a href="Pages/gameDescription.html"><img class="coverImg" src="imagens/GTA SA/Gta SA.jpg" alt=""></a>
                             </div>
                             <div class="description">
                                 <h1>GTA SA</h1>
                                 <p>50,00</p>
                                 <div class="screens">
-                                    <img onclick="imgCover(1)" class="screen1" src="imagens/GTA SA/Gta SA screen.jpg" alt="">
-                                    <img onclick="imgCover(2)" class="screen2" src="imagens/GTA SA/Gta SA screen2.jpg" alt="">
-                                    <img onclick="imgCover(3)" class="screen3" src="imagens//GTA SA/Gta SA screen3.jpg" alt="">
-                                    <img onclick="imgCover(4)" class="screen4" src="imagens//GTA SA/Gta SA screen4.jpg" alt="">
+                                    <img onmouseover="screen(0)" class="screen" src="imagens/GTA SA/Gta SA.jpg" alt="">
+                                    <img onmouseover="screen(1)" class="screen" src="imagens/GTA SA/Gta SA screen2.jpg" alt="">
+                                    <img onmouseover="screen(2)" class="screen" src="imagens/GTA SA/Gta SA screen3.jpg" alt="">
+                                    <img onmouseover="screen(3)" class="screen" src="imagens/GTA SA/Gta SA screen.jpg" alt="">
                                 </div>  
                                 <div class="comprar">
                                     <a href="">Comprar</a>
@@ -72,16 +72,16 @@
                         </div>
                         <div class="slider">
                             <div class="cover">
-                                <img src="imagens//NFS/Need for Speed.jpg" alt="">
+                                <img class="coverImg" src="imagens//NFS/Need for Speed.jpg" alt="">
                             </div>
                             <div class="description">
                                 <h1>Need For Speed <strong>Payback</strong></h1>
                                 <p>50,00</p>
                                 <div class="screens">
-                                    <img src="imagens/NFS/Need for Speed screen1.jpg" alt="">
-                                    <img src="imagens/NFS/Need for Speed screen2.jpg" alt="">
-                                    <img src="imagens/NFS/Need for Speed screen3.jpg" alt="">
-                                    <img src="imagens/NFS/Need for Speed screen4.jpg" alt="">
+                                    <img onmouseover="screen(0)" class="screen1" src="imagens//NFS/Need for Speed.jpg" alt="">
+                                    <img onmouseover="screen(1)" class="screen1" src="imagens/NFS/Need for Speed screen2.jpg" alt="">
+                                    <img onmouseover="screen(2)" class="screen1" src="imagens/NFS/Need for Speed screen3.jpg" alt="">
+                                    <img onmouseover="screen(3)" class="screen1" src="imagens/NFS/Need for Speed screen4.jpg" alt="">
                                 </div>  
                                 <div class="comprar">
                                     <a href="">Comprar</a>
@@ -91,16 +91,16 @@
                         </div>
                         <div class="slider">
                             <div class="cover">
-                                <img src="imagens/The Legend of Zelda/The Legend of Zelda.jpg" alt="">
+                                <img class="coverImg" src="imagens/The Legend of Zelda/The Legend of Zelda.jpg" alt="">
                             </div>
                             <div class="description">
                                 <h1>The Legend of Zelda</h1>
                                 <p>50,00</p>
                                 <div class="screens">
-                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen1.jpg" alt="">
-                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen2.jpg" alt="">
-                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen3.jpg" alt="">
-                                    <img src="imagens/The Legend of Zelda/The Legend of Zelda screen4.jpg" alt="">
+                                    <img onmouseover="screen(0)" class="screen2" src="imagens/The Legend of Zelda/The Legend of Zelda.jpg" alt="">
+                                    <img onmouseover="screen(1)" class="screen2" src="imagens/The Legend of Zelda/The Legend of Zelda screen2.jpg" alt="">
+                                    <img onmouseover="screen(2)" class="screen2" src="imagens/The Legend of Zelda/The Legend of Zelda screen3.jpg" alt="">
+                                    <img onmouseover="screen(3)" class="screen2" src="imagens/The Legend of Zelda/The Legend of Zelda screen4.jpg" alt="">
                                 </div>  
                                 <div class="comprar">
                                     <a href="">Comprar</a>
@@ -236,28 +236,43 @@
             </div>
         </footer>
     </section>
-    <script>
-        var slider;
-        var loop = setInterval(scrollCarousel1, 8000);
-        var counter = 0;
-        function scrollCarousel1 () {
-            counter++;
-            var slider1 = document.getElementById ("sliderCanvas");
-            slider1.scrollBy (600, 0);
-            if (counter === 3) {
-                slider1.scrollBy (-2000, 0);
-                counter = 0;
-            }
-        }
-        function scrollCarousel(x, y) {
-         var slider = document.getElementById ("sliderCanvas");
-         slider.scrollBy(x, y);
-        }
-        function scrollItens(x, y) {
-         var itens = document.getElementById ("article");
-          itens.scrollBy(x, y);
-        }
-
-        </script>
 </body>
+<script>
+    var slider;
+    var loop = setInterval(scrollCarousel1, 8000);
+    var counter = 0;
+    function scrollCarousel1 () {
+        counter++;
+        var slider1 = document.getElementById ("sliderCanvas");
+        slider1.scrollBy (550, 0);
+        if (counter === 3) {
+            slider1.scrollBy (-2000, 0);
+            counter = 0;
+        }
+    }
+    function scrollCarousel(x, y) {
+     var slider = document.getElementById ("sliderCanvas");
+     slider.scrollBy(x, y);
+    }
+
+    function scrollItens(x, y) {
+     var itens = document.getElementById ("article");
+      itens.scrollBy(x, y);
+    }
+    function screen(i) {
+        var imgCover = document.getElementsByClassName("coverImg");
+        var imgScreen = document.getElementsByClassName("screen");
+        var imgScreen1 = document.getElementsByClassName("screen1");
+        var imgScreen2 = document.getElementsByClassName("screen2");
+        var imgScreenAdress = imgScreen[i].getAttribute("src");
+        var imgScreenAdress1 = imgScreen1[i].getAttribute("src");
+        var imgScreenAdress2 = imgScreen2[i].getAttribute("src");
+
+        imgCover[0].setAttribute("src", imgScreenAdress);
+        imgCover[1].setAttribute("src", imgScreenAdress1);
+        imgCover[2].setAttribute("src", imgScreenAdress2);
+
+    }
+
+    </script>
 </html>
