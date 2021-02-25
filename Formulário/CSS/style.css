@@ -32,7 +32,7 @@
 /*Configurações para a pagina inteira*/
 p, h1, a, legend, label, button{
     text-align: center;
-    color: var(--cor1);
+    color: var(--cor2);
     font-size: 1.8em;
     line-height: 2em;
     text-decoration: none;

@@ -117,7 +117,7 @@ html {scroll-behavior: smooth;}
 
     /*Itens*/
 
-#article {
+.article {
     width: 100%;
     display: flex;
     overflow-x: hidden;
@@ -134,10 +134,10 @@ html {scroll-behavior: smooth;}
     justify-content: space-around;
     align-items: center;
     scroll-snap-align: start;}
-#botao1 {
+.botao1 {
     position: absolute;
     left: 4%;}
-#botao2 {
+.botao2 {
     position: absolute;
     right: 4%;}
 .seções div img {
@@ -164,7 +164,7 @@ html {scroll-behavior: smooth;}
     }
     .seções div {width: 80%; margin: 10px auto; padding: 0;}
     .seções div > a {width: 100%; margin: 6px auto;}
-    .seções #botao1, #botao2 {
+    .seções .botao1, .botao2 {
         display: none;
     }
     #article {overflow-x: auto;}
