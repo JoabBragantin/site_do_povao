@@ -3,9 +3,9 @@
 require "connection.php";
 
 /*Inserir produto */
-function CREATE_PRODUCT ($nome, $descricao, $imagem, $preco, $produtora, $dataLancamento) {
-    $command = "INSERT INTO product(nome, descricao, imagem, preco, produtora, dataLancamento) 
-    VALUES ('$nome', '$descricao', '$imagem', $preco, '$produtora', '$dataLancamento')";
+function CREATE_PRODUCT ($nome, $descricao, $video_url, $preco, $plataforma, $produtora, $dataLancamento) {
+    $command = "INSERT INTO product(nome, descricao, video_url, preco, plataforma, produtora, dataLancamento) 
+    VALUES ('$nome', '$descricao', '$video_url', $preco, '$plataforma', '$produtora', '$dataLancamento')";
 
     $worked = mysqli_query(con(), $command);
 
@@ -36,9 +36,9 @@ function SHOW_PRODUCT ($idProduto) {
 }
 
 /*Atualizar produto */
-function UPDATE_PRODUCT ($idProduto, $nome, $descricao, $imagem, $preco, $produtora, $dataLancamento) {
-    $command = "UPDATE product SET nome='$nome', descricao='$descricao', imagem='$imagem', preco=$preco,
-    produtora='$produtora', dataLancamento='$dataLancamento' WHERE idProduto=$idProduto";
+function UPDATE_PRODUCT ($idProduto, $nome, $descricao, $video_url, $preco, $plataforma, $produtora, $dataLancamento) {
+    $command = "UPDATE product SET nome='$nome', descricao='$descricao', video_url='$video_url', preco=$preco,
+    plataforma='$plataforma', produtora='$produtora', dataLancamento='$dataLancamento' WHERE idProduto=$idProduto";
 
     $worked = mysqli_query(con(), $command);
 
