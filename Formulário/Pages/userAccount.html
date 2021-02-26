@@ -9,9 +9,137 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
     <style>
+
+        /*Padrão da página*/
+
+        select {
+            margin: 0;
+            width: 40%;}
+        span {
+            display: inline-block;
+            color: var(--cor5);}
+        .title {
+        background-color: var(--cor4);
+        width: 100%;}
         #main article {
+            grid-area: article;}
+        #page {
+            display: grid;
+            grid-template-columns: 60% 40%;}
+
+            /*Header*/
+
+        #header {
+            background-image: linear-gradient(var(--cor3), 25%, var(--cor1));
+            width: 100%;
+            margin: 20px auto;
+            display: flex;
+            justify-content: space-between;
+            grid-column: 1 / 3;}
+        #header div h1 {
+            font-size: 4em;}
+        #header div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 30%;
+            padding: 10px;}
+        #header div img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;}
+        #header div:nth-child(2){
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;}
+
+            /*Article*/
+
+        .article { 
+            background-image: linear-gradient(var(--cor3), 25%, var(--cor1));
+            width: 90%;
+            margin: 40px auto;
+            border: 2px solid var(--cor2);
+            grid-column: 1;
+            align-self: baseline;}
+        .article .articleContent {
             grid-area: article;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;}
+        .articleContent div{
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;}
+        .articleContent a, p {
+            text-align: start;
+            text-decoration: none;
+            font-size: 1.2em;}
+        .articleContent h1 {
+            text-align: start;
+            font-size: 3em;}
+
+            /*Aside*/
+
+        #aside {
+            background-image: repeating-radial-gradient(var(--cor2) 40%, var(--cor1) 80%) ;
+            width: 100%;
+            grid-column: 2;
+            grid-row: 2 / 6;}
+        #recent div {
+            margin: 20px auto;
+            width: 90%;
+            background-color: var(--cor3);
+            border: 2px solid var(--cor2);
+            padding: 10px;}
+        #aside img {
+            width: 100%;}
+
+            /*Responsivo*/
+
+        @media(max-width: 800px){
+           
+            #page {
+                display: flex;
+                flex-direction: column;}
+
+            #header {
+                order: 1;
+                font-size: 1em;}
+            #header div:nth-child(n + 1) {
+                padding: 2px;}
+            #header div h1 {
+                font-size: 2.8em;}
+            #header div img {
+                width: 100px;
+                height: 100px;}
+            #header button {
+                margin: 2px;
+                padding: 0;}
+
+            #article {
+            order: 3;}
+            .articleContent a, p {
+            text-align: center;
+            text-decoration: none;
+            font-size: .8em;}
+            .articleContent h1 {
+                text-align: center;
+                font-size: 2em;}
+
+            #aside {
+                order: 2;}
+            #recent {
+                display: flex;
+                flex-wrap: wrap;}
+            #recent .games {
+                max-width: 40%;}
         }
+
     </style>
 </head>
 <body>
@@ -28,6 +156,104 @@
     
             </header>
         <article>
+            <section id="page">
+                <div id="header">
+                    <div><img src="../SVG/Conta.svg" alt="">
+                         <button style="font-size: 1em;">Alterar foto de perfil</button>
+                    </div>
+                    <div><h1 style="grid-column: 2;">nome do usuário</h1>
+                    <p style="grid-column: 2;">email do usuário</p>
+                    <p style="grid-column: 2;">Itens Comprados:</p></div>
+                </div>
+                <div id="article">
+                    <div class="article">
+                        <h1 class="title">Histórico na loja e saldo</h1>
+                        <div class="articleContent">
+                            <div>
+                                <a href="#">Adicionar crédito na carteira delicia</a>
+                                <p>Saldo na carteira:</p>
+                                <h1>R$ Valor</h1>
+                                <hr>
+                                <a href="#">Adicionar formas de pagamento</a>
+                            </div>
+                            <div>
+                                <p>Moeda de seu páis</p>
+                                <select name="país">
+                                    <option value="NULL">---</option>
+                                    <option value="Real">Real Brasileiro</option>
+                                    <option value="Dolar">Dolar</option>
+                                    <option value="Libras">Libras</option>
+                                </select>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="article">
+                        <h1 class="title">Dados do usuário</h1>
+                        <div class="articleContent">
+                            <div>
+                                <p>Dados da conta:</p>
+                                <p>Endereço de email: <span>endereço de email</span></p>
+                                <p>telefone: <span>numero de telefone</span></p>
+                                <hr>
+                                <a href="#">Alterar endereço de email</a>
+                            </div>
+                            <div>
+                                <a href="#">Adicionar numero de telefone</a>
+                                <p>para uma maior segurança
+                                voce pode adicionar seu numero
+                                de telefone vinculada a sua conta!</p>
+                                <a href="#">Alterar dados da conta</a>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="article">
+                        <h1 class="title">Desativar conta ou deslogar</h1>
+                        <div class="articleContent">
+                            <div>
+                                <a href="#">Desativar conta</a>
+                                <a href="#">Excluir conta</a>
+                                <hr>
+                                <p>você pode desativar sua conta
+                                temporariamente e reativar mais
+                                tarde, ou apenas excluí-la</p>
+                            </div>
+                            <div>
+                                <a href="#">Remover cartão de crédito</a>
+                                <a href="#">Sair da conta</a>
+                            </div>
+                        </div>    
+                    </div>
+                </div>    
+                <div id="aside">
+                    <div id="recent">
+                        <h1 class="title" >Recentemente comprados</h1>
+                        <div class="games">
+                            <a href="#"><img src="../imagens/GTA SA/Gta SA.jpg" alt=""></a>
+                            <h1>teste</h1>
+                        </div>
+                        <div class="games">
+                            <a href="#"><img src="../imagens/GTA SA/Gta SA.jpg" alt=""></a>
+                            <h1>teste</h1>
+                        </div>
+                        <div class="games">
+                            <a href="#"><img src="../imagens/GTA SA/Gta SA.jpg" alt=""></a>
+                            <h1>teste</h1>
+                        </div>
+                        <div class="games">
+                            <a href="#"><img src="../imagens/GTA SA/Gta SA.jpg" alt=""></a>
+                            <h1>teste</h1>
+                        </div>
+                        <div class="games">
+                            <a href="#"><img src="../imagens/GTA SA/Gta SA.jpg" alt=""></a>
+                            <h1>teste</h1>
+                        </div>
+                        <div class="games">
+                            <a href="#"><img src="../imagens/GTA SA/Gta SA.jpg" alt=""></a>
+                            <h1>teste</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </article>
         <footer>
             <a href="#"><img class="logo footer" src="../SVG/logo.svg" alt="logo"></a>
